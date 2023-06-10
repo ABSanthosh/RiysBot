@@ -3,10 +3,15 @@ import discord
 from discord.ext import commands
 from discord import app_commands
 
+limits = {
+    "cute": 5
+}
+
 
 class CuteOMeter(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
+        self.baseUrl = "https://absanthosh.github.io/RiysBot/reactions/cute/"
         self.phrases = [
             "is absolutely precious!",
             "is just so adorable!",
@@ -27,7 +32,12 @@ class CuteOMeter(commands.Cog):
         phrase = random.choice(self.phrases)
         mention = user.mention
         name = user.name
-        embed = discord.Embed(title="Cute-O-Meter", description=f"{mention} {phrase}", color=0x00ff00)
+        embed = discord.Embed(title="Cute-O-Meter",
+                              description=f"{mention} {phrase}", color=0x00ff00)
+
+        embed.set_image(
+            url=f"{self.baseUrl}cute_{random.randint(1, limits['cute'])}.jpg")
+
         await ctx.response.send_message(embed=embed)
 
 
