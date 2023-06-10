@@ -9,7 +9,7 @@
         justify-content: center;
     "
 >
-<img src="./public/Icon.jpeg" alt="Ryis-Bot" width="200" height="200" />
+<img src="./public/Icon.jpeg" alt="Ryis-Bot" height="200" />
 </div>
 
 
