@@ -65,42 +65,113 @@ class Reactions(commands.Cog):
     @app_commands.command(name="hug", description="Send a user a hug :3")
     async def hug(self, ctx, user: discord.Member):
         message = random.choice(self.reaction_messages["hug"])
-        await ctx.response.send_message(f"{ctx.user.mention} {message.replace('{user}', user.mention)} {self.baseUrl}hug/hug_{random.randint(1, limits['hug'])}.gif")
+        embed = discord.Embed(
+            title=f"{ctx.user.name} {message.replace('{user}', user.name)}",
+            color=discord.Color.random()
+        )
+        embed.set_image(
+            url=f"{self.baseUrl}hug/hug_{random.randint(1, limits['hug'])}.gif")
+
+        embed.add_field(
+            name="", value=f"||{ctx.user.mention} {user.mention}||")
+        await ctx.response.send_message(embed=embed)
 
     @app_commands.command(name="kiss", description="Give the user a kiss mwah <3")
     async def kiss(self, ctx, user: discord.Member):
         message = random.choice(self.reaction_messages["kiss"])
-        await ctx.response.send_message(f"{ctx.user.mention} {message.replace('{user}', user.mention)} {self.baseUrl}kiss/kiss_{random.randint(1, limits['kiss'])}.gif")
+        embed = discord.Embed(
+            title=f"{ctx.user.name} {message.replace('{user}', user.name)}",
+            color=discord.Color.random()
+        )
+        embed.set_image(
+            url=f"{self.baseUrl}kiss/kiss_{random.randint(1, limits['kiss'])}.gif")
+
+        embed.add_field(
+            name="", value=f"||{ctx.user.mention} {user.mention}||")
+        await ctx.response.send_message(embed=embed)
 
     @app_commands.command(name="blush", description="Blush!")
     async def blush(self, ctx):
         message = random.choice(self.reaction_messages["blush"])
-        await ctx.response.send_message(f"{ctx.user.mention} {message} {self.baseUrl}blush/blush_{random.randint(1, limits['blush'])}.gif")
+        embed = discord.Embed(
+            title=f"{ctx.user.name} {message}",
+            color=discord.Color.random()
+        )
+        embed.set_image(
+            url=f"{self.baseUrl}blush/blush_{random.randint(1, limits['blush'])}.gif")
+
+        embed.add_field(name="", value=f"||{ctx.user.mention}||")
+        await ctx.response.send_message(embed=embed)
 
     @app_commands.command(name="wave", description="Wave at a user!")
     async def wave(self, ctx, user: discord.Member):
         message = random.choice(self.reaction_messages["wave"])
-        await ctx.response.send_message(f"{ctx.user.mention} {message.replace('{user}', user.mention)} {self.baseUrl}wave/wave_{random.randint(1, limits['wave'])}.gif")
+        embed = discord.Embed(
+            title=f"{ctx.user.name} {message.replace('{user}', user.name)}",
+            color=discord.Color.random()
+        )
+        embed.set_image(
+            url=f"{self.baseUrl}wave/wave_{random.randint(1, limits['wave'])}.gif")
+
+        embed.add_field(
+            name="", value=f"||{ctx.user.mention} {user.mention}||")
+        await ctx.response.send_message(embed=embed)
 
     @app_commands.command(name="pat", description="Give user a headpat uwu")
     async def pat(self, ctx, user: discord.Member):
         message = random.choice(self.reaction_messages["pat"])
-        await ctx.response.send_message(f"{ctx.user.mention} {message.replace('{user}', user.mention)} {self.baseUrl}pat/pat_{random.randint(1, limits['pat'])}.gif")
+        embed = discord.Embed(
+            title=f"{ctx.user.name} {message.replace('{user}', user.name)}",
+            color=discord.Color.random()
+        )
+        embed.set_image(
+            url=f"{self.baseUrl}pat/pat_{random.randint(1, limits['pat'])}.gif")
+
+        embed.add_field(
+            name="", value=f"||{ctx.user.mention} {user.mention}||")
+        await ctx.response.send_message(embed=embed)
 
     @app_commands.command(name="poke", description="Poke a user!")
     async def poke(self, ctx, user: discord.Member):
         message = random.choice(self.reaction_messages["poke"])
-        await ctx.response.send_message(f"{ctx.user.mention} {message.replace('{user}', user.mention)} {self.baseUrl}poke/poke_{random.randint(1, limits['poke'])}.gif")
+        embed = discord.Embed(
+            title=f"{ctx.user.name} {message.replace('{user}', user.name)}",
+            color=discord.Color.random()
+        )
+        embed.set_image(
+            url=f"{self.baseUrl}poke/poke_{random.randint(1, limits['poke'])}.gif")
+
+        embed.add_field(
+            name="", value=f"||{ctx.user.mention} {user.mention}||")
+        await ctx.response.send_message(embed=embed)
 
     @app_commands.command(name="bite", description="Bite a user!")
     async def bite(self, ctx, user: discord.Member):
         message = random.choice(self.reaction_messages["bite"])
-        await ctx.response.send_message(f"{ctx.user.mention} {message.replace('{user}', user.mention)} {self.baseUrl}bite/bite_{random.randint(1, limits['bite'])}.gif")
+        embed = discord.Embed(
+            title=f"{ctx.user.name} {message.replace('{user}', user.name)}",
+            color=discord.Color.random()
+        )
+        embed.set_image(
+            url=f"{self.baseUrl}bite/bite_{random.randint(1, limits['bite'])}.gif")
+
+        embed.add_field(
+            name="", value=f"||{ctx.user.mention} {user.mention}||")
+        await ctx.response.send_message(embed=embed)
 
     @app_commands.command(name="slap", description="Slap the shit out of a user! :p")
     async def slap(self, ctx, user: discord.Member):
         message = random.choice(self.reaction_messages["slap"])
-        await ctx.response.send_message(f"{ctx.user.mention} {message.replace('{user}', user.mention)} {self.baseUrl}slap/slap_{random.randint(1, limits['slap'])}.gif")
+        embed = discord.Embed(
+            title=f"{ctx.user.name} {message.replace('{user}', user.name)}",
+            color=discord.Color.random()
+        )
+        embed.set_image(
+            url=f"{self.baseUrl}slap/slap_{random.randint(1, limits['slap'])}.gif")
+
+        embed.add_field(
+            name="", value=f"||{ctx.user.mention} {user.mention}||")
+        await ctx.response.send_message(embed=embed)
 
 
 async def setup(bot):

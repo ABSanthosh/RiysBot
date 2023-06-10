@@ -27,7 +27,8 @@ class CuteOMeter(commands.Cog):
         phrase = random.choice(self.phrases)
         mention = user.mention
         name = user.name
-        await ctx.response.send_message(f"{mention} {phrase}")        
+        embed = discord.Embed(title="Cute-O-Meter", description=f"{mention} {phrase}", color=0x00ff00)
+        await ctx.response.send_message(embed=embed)
 
 
 async def setup(bot):
