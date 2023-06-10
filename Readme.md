@@ -10,10 +10,11 @@
     "
 >
 <img src="./public/Icon.jpeg" alt="Ryis-Bot" height="200" />
+<br/>
+Ryis-Bot is a simple Discord bot that brings fun and interaction to your server.
 </div>
 
 
-Ryis-Bot is a simple Discord bot that brings fun and interaction to your server.
 
 ## General Commands
 
